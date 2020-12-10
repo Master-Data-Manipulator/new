@@ -1,3 +1,4 @@
+
 <ion-header class="black">
   <ion-toolbar class="black">
     
@@ -8,12 +9,74 @@
 
   </ion-toolbar>
 
- 
+<div class="body">
 
-<ion-content>
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">My Navigation Bar</ion-title>
-    </ion-toolbar>
-  </ion-header>
-</ion-content>
+<!-- The reorder gesture is disabled by default, enable it to drag and drop items -->
+<ion-reorder-group (ionItemReorder)="doReorder($event)" disabled="false">
+  <!-- Default reorder icon, end aligned items -->
+  <ion-item>
+    <ion-label>
+      Advanced Certified Hospice and Palliati...
+    </ion-label>
+    <ion-reorder slot="end"></ion-reorder>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>
+      Acute Care Nurse Practitioner
+    </ion-label>
+    <ion-reorder slot="end"></ion-reorder>
+  </ion-item>
+
+  <!-- Default reorder icon, start aligned items -->
+<ion-item>
+  <ion-label>
+    Adult Nurse Practitioner
+  </ion-label>
+  <ion-reorder slot="end"></ion-reorder>
+</ion-item>
+
+<ion-item>
+  <ion-label>
+  Certified Dialysis Nurse
+  </ion-label>
+  <ion-reorder slot="end"></ion-reorder>
+</ion-item>
+
+<ion-item>
+  <ion-label>
+    Certified Emergency Nurse
+  </ion-label>
+  <ion-reorder slot="end"></ion-reorder>
+</ion-item>
+
+<ion-item>
+  <ion-label>
+    Certified Heart Failure Nurse
+  </ion-label>
+  <ion-reorder slot="end"></ion-reorder>
+</ion-item>
+
+<ion-item>
+  <ion-label>
+  Licensed Practical Nurse
+  </ion-label>
+  <ion-reorder slot="end"></ion-reorder>
+</ion-item>
+
+<ion-item>
+  <ion-label>
+    Pain Management Nursing
+  </ion-label>
+  <ion-reorder slot="end"></ion-reorder>
+</ion-item>
+
+<ion-item>
+  <ion-label>
+  Trauma Certified Registered Nurse
+  </ion-label>
+  <ion-reorder slot="end"></ion-reorder>
+</ion-item>
+
+</div>
+
