@@ -1,0 +1,61 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+  </ion-header>
+
+  <div id="container">
+    <div id="mid">
+      <h2>LOGO</h2>
+
+      <div class="authBlock">
+
+        <div class="formGroup">
+          <input type="text" class="formControl" placeholder="User ID / Email" #userName required>
+        </div>
+
+        <div class="formGroup">
+          <input type="password" class="formControl" placeholder="Password" #userPassword required>
+        </div>
+
+        <!-- Calling SignIn Api from AuthService -->
+        <div class="formGroup">
+          <input type="button" id="button" value="Log in"
+            (click)="authService.SignIn(userName.value, userPassword.value)">
+        </div>
+
+        <div class="contain">
+          <a id="link" href="/forgot-password">Forgot User Id/Password</a>
+          <a id="link" href="/register-user">Sign Up</a>
+        </div>
+        <br><br><br>
+        <!-- Calling GoogleAuth Api from AuthService -->
+        <div class="formGroup">
+          <button type="button" class="btn googleBtn" (click)="authService.GoogleAuth()">
+            <i class="fab fa-google-plus-g"></i>
+            Log in with Google
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-bar">
+
+    <div class="bottom-button">
+      <ion-icon name="finger-print-outline"></ion-icon>
+      <ion-label>Touch ID</ion-label>
+    </div>
+
+    <div class="bottom-button">
+      <ion-icon id="tc" name="newspaper-outline"></ion-icon>
+      <ion-label>Terms & Conditons</ion-label>
+    </div>
+
+    <div class="bottom-button">
+      <ion-icon name="call-outline"></ion-icon>
+      <ion-label>Contact Us</ion-label>
+    </div>
+
+  </div>
+
+</ion-content>

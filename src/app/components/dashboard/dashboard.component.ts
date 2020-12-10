@@ -10,7 +10,10 @@ import { ItemReorderEventDetail } from '@ionic/core';
   styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent {
+  items = [1, 2, 3, 4, 5];
+
   @ViewChild(IonReorderGroup) reorderGroup: IonReorderGroup;
+  
   constructor() { }
 
   doReorder(ev: CustomEvent<ItemReorderEventDetail>) {
