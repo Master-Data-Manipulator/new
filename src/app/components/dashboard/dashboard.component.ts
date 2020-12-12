@@ -12,7 +12,11 @@ import { ItemReorderEventDetail } from '@ionic/core';
 export class DashboardComponent {
   items = [1, 2, 3, 4, 5];
 
-  @ViewChild(IonReorderGroup) reorderGroup: IonReorderGroup;
+  @ViewChild(IonReorderGroup, { static: true }) reorderGroup: IonReorderGroup;
+  reorderList(ev: any) {
+    console.log('Dragged from index', ev.detail.from, 'to', ev.detail.to);
+    ev.detail.complete();
+  }
   
   constructor() { }
 

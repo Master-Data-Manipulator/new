@@ -17,6 +17,11 @@ import { environment } from '../environments/environment';
 
 import { AuthService } from "./shared/services/auth.service";
 
+import { SQLitePorter } from '@ionic-native/sqlite-porter/ngx';
+import { SQLite } from '@ionic-native/sqlite/ngx';
+
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -25,11 +30,14 @@ import { AuthService } from "./shared/services/auth.service";
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule,
-    BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+    BrowserModule, IonicModule.forRoot(), AppRoutingModule,
+  HttpClientModule],
   providers: [AuthService,
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    SQLite,
+    SQLitePorter
   ],
   bootstrap: [AppComponent]
 })

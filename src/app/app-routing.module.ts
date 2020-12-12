@@ -20,6 +20,21 @@ const routes: Routes = [
   { path: 'verify-email-address', component: VerifyEmailComponent },
   { path: 'terms', component: TermsComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'developers', loadChildren: './pages/developers/developers.module#DevelopersPageModule' },
+  { path: 'developers/:id', loadChildren: './pages/developer/developer.module#DeveloperPageModule' },
+  {
+    path: 'developers',
+    loadChildren: () => import('./pages/developers/developers.module').then( m => m.DevelopersPageModule)
+  },
+  {
+    path: 'developer',
+    loadChildren: () => import('./pages/developer/developer.module').then( m => m.DeveloperPageModule)
+  },  {
+    path: 'accordian',
+    loadChildren: () => import('./pages/accordian/accordian.module').then( m => m.AccordianPageModule)
+  },
+
+
 
 ];
 
