@@ -21,12 +21,13 @@ import { SQLitePorter } from '@ionic-native/sqlite-porter/ngx';
 import { SQLite } from '@ionic-native/sqlite/ngx';
 
 import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from "@angular/common";
 
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [ 
+  imports: [CommonModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule,

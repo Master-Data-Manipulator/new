@@ -9,6 +9,7 @@ import { AuthGuard } from "../app/shared/guard/auth.guard";
 import { VerifyEmailComponent } from '../app/components/verify-email/verify-email.component';
 import { TermsComponent } from '../app/components/bottom-bar/terms/terms.component';
 import { ContactComponent } from '../app/components/bottom-bar/contact/contact.component';
+import { CertificateHomeComponent } from './pages/certificate-home/certificate-home.component';
 
 
 const routes: Routes = [
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'developers', loadChildren: './pages/developers/developers.module#DevelopersPageModule' },
   { path: 'developers/:id', loadChildren: './pages/developer/developer.module#DeveloperPageModule' },
+  { path: 'certificate-home', component: CertificateHomeComponent},
   {
     path: 'developers',
     loadChildren: () => import('./pages/developers/developers.module').then( m => m.DevelopersPageModule)
@@ -29,9 +31,6 @@ const routes: Routes = [
   {
     path: 'developer',
     loadChildren: () => import('./pages/developer/developer.module').then( m => m.DeveloperPageModule)
-  },  {
-    path: 'accordian',
-    loadChildren: () => import('./pages/accordian/accordian.module').then( m => m.AccordianPageModule)
   },
 
 
