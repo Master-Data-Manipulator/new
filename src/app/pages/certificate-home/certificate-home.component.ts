@@ -3,7 +3,6 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IonReorderGroup } from '@ionic/angular';
 import { ItemReorderEventDetail } from '@ionic/core';
-import { HttpErrorResponse } from '@angular/common/http';
 
 
 @Component({
@@ -13,9 +12,6 @@ import { HttpErrorResponse } from '@angular/common/http';
 })
 export class CertificateHomeComponent implements OnInit {
   @ViewChild(IonReorderGroup) reorderGroup: IonReorderGroup;
-
-
-  numbers: any[] = ['1', '2', '3', '4', '5', '6'];
 
 
   developers: Dev[] = [];

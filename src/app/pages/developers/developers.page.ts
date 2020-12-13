@@ -11,9 +11,10 @@ import { ItemReorderEventDetail } from '@ionic/core';
   styleUrls: ['./developers.page.scss'],
 })
 export class DevelopersPage implements OnInit {
-
   @ViewChild(IonReorderGroup) reorderGroup: IonReorderGroup;
 
+
+  numbers = ['1', '2', '3', '4', '5', '6'];
   developers: Dev[] = [];
   items = [];
   products: Observable<any[]>;

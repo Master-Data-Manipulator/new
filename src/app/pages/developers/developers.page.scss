@@ -28,3 +28,33 @@ ion-icon{
   font-size: 30px;
   color: rgb(255, 255, 255);
 }
+
+.container{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(56, 56, 56);
+}
+
+.box{
+    color: #000000;
+    line-height: 45px;
+    margin-bottom: -150px;
+    text-justify: auto;
+    background-color: rgb(226, 226, 226);
+    height: 200px;
+    width: 100%;
+    border-radius: 12px;
+}
+
+
+.box:hover{
+  margin-bottom: -50px;
+}
+
+.box:nth-child( even ) {
+   background-color: #555555;
+}
+
+.container:nth-child(even) {
+    background-color: rgb(83, 83, 83);
+}

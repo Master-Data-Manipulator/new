@@ -1,0 +1,33 @@
+<ion-content padding [fullscreen]="true">
+<ion-header>
+  <ion-toolbar class="black">
+
+    <div class="header">
+      <img src="assets/pic.png" alt="Girl in a jacket" width="48" height="48">
+      <ion-title>Tony Stark</ion-title>
+    </div>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-reorder-group (ionItemReorder)="doReorder($event)" disabled="false">
+        <ion-item button *ngFor="let dev of developers" [routerLink]="['/', 'developers', dev.id]">
+          <ion-avatar slot="start">
+            <img [src]="dev.img">
+          </ion-avatar>
+          <ion-label>
+            <h2>{{ dev.name }}</h2>
+            <p>{{ dev.skills }}</p>
+          </ion-label>
+          <ion-reorder></ion-reorder>
+        </ion-item>
+      </ion-reorder-group>
+
+
+<div class="bottom-bar">
+  <div class="bottom-button">
+    <ion-icon name="add-circle-outline"></ion-icon>
+  </div>
+</div>
+
+</ion-content>

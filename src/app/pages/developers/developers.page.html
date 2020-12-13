@@ -1,4 +1,3 @@
-<ion-content padding [fullscreen]="true">
 <ion-header>
   <ion-toolbar class="black">
 
@@ -10,24 +9,22 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-reorder-group (ionItemReorder)="doReorder($event)" disabled="false">
-        <ion-item button *ngFor="let dev of developers" [routerLink]="['/', 'developers', dev.id]">
-          <ion-avatar slot="start">
-            <img [src]="dev.img">
-          </ion-avatar>
-          <ion-label>
-            <h2>{{ dev.name }}</h2>
-            <p>{{ dev.skills }}</p>
-          </ion-label>
-          <ion-reorder></ion-reorder>
-        </ion-item>
-      </ion-reorder-group>
-
-
-<div class="bottom-bar">
-  <div class="bottom-button">
-    <ion-icon name="add-circle-outline"></ion-icon>
+<ion-content>
+  <div class="container" *ngFor="let dev of developers">
+    <div class="box">
+      {{dev.name}}
+    </div>
   </div>
-</div>
 
 </ion-content>
+
+
+<ion-footer>
+  <ion-toolbar>
+    <div class="bottom-bar">
+      <div class="bottom-button">
+        <ion-icon name="add-circle-outline"></ion-icon>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-footer>
