@@ -10,9 +10,10 @@
 </ion-header>
 
 <ion-content>
-  <div class="container" *ngFor="let dev of developers">
-    <div class="box">
-      {{dev.name}}
+  <div class="container">
+
+    <div class="box" *ngFor="let dev of developers">
+     <p>{{dev.name}}</p>
     </div>
   </div>
 

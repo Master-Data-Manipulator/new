@@ -40,7 +40,6 @@ ion-icon{
     line-height: 45px;
     margin-bottom: -150px;
     text-justify: auto;
-    background-color: rgb(226, 226, 226);
     height: 200px;
     width: 100%;
     border-radius: 12px;
@@ -52,9 +51,15 @@ ion-icon{
 }
 
 .box:nth-child( even ) {
-   background-color: #555555;
+     background-color: rgb(255, 255, 255);
 }
 
-.container:nth-child(even) {
-    background-color: rgb(83, 83, 83);
+.box:nth-child( odd ) {
+     background-color: rgb(195, 195, 195);
 }
+
+p{margin-left: 10px;}
+
+
+
+
