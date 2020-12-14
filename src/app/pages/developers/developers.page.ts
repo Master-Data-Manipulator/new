@@ -14,6 +14,7 @@ import { MenuController } from '@ionic/angular';
 export class DevelopersPage implements OnInit {
   @ViewChild(IonReorderGroup) reorderGroup: IonReorderGroup;
 
+  
 
   numbers = ['1', '2', '3', '4', '5', '6'];
   developers: Dev[] = [];
@@ -75,4 +76,9 @@ export class DevelopersPage implements OnInit {
         this.product = {};
       });
   }
+
+  toggleClass = (event) => {
+    event.target.classList.toggle('my-class');
+  }
+
 }
