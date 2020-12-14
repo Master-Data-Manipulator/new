@@ -5,11 +5,29 @@
       <img src="assets/pic.png" alt="Girl in a jacket" width="48" height="48">
       <ion-title>Tony Stark</ion-title>
     </div>
-
+ <div id="flex">Menu<ion-menu-button id="menubutton"></ion-menu-button></div>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+<ion-menu side="end" menuId="first" contentId="content1">
+<ion-content>
+    <ion-list>
+      <ion-menu-toggle auto-hide="true">
+        <ion-item>132132123</ion-item>
+        <ion-item>132132123</ion-item>
+        <ion-item>132132123</ion-item>
+        <ion-item>132132123</ion-item>
+        <ion-item>132132123</ion-item>
+        <ion-item>132132123</ion-item>
+      </ion-menu-toggle>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-router-outlet id="content1"></ion-router-outlet>
+
+
   <div class="container">
     <h2>Certifications</h2>
     <div class="box" *ngFor="let dev of developers">

@@ -85,6 +85,31 @@ h2{
   justify-content: space-around;
 }
 
+#menubutton{margin-bottom: -12px; }
+
+#flex{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+ justify-content: flex-end;
+}
+
+
+
+ion-menu {
+  --ion-background-color: var(--ion-item-background);
+  --ion-text-color: var(--ion-color-primary-contrast);
+
+  ion-toolbar {
+    --background: var(--ion-color-primary);
+  }
+
+  ion-list {/* optional, but it needs when you use gradient as a background color.*/
+    background: transparent;
+  }
+}
+
+
 
 
 

@@ -3,6 +3,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IonReorderGroup } from '@ionic/angular';
 import { ItemReorderEventDetail } from '@ionic/core';
+import { MenuController } from '@ionic/angular';
 
 
 @Component({
@@ -29,9 +30,24 @@ export class DevelopersPage implements OnInit {
   
   
 
-  constructor(private db: DatabaseService) {}
+  constructor(private db: DatabaseService, private menu: MenuController) {}
 
+//menu
+  openFirst() {
+    this.menu.enable(true, 'first');
+    this.menu.open('first');
+  }
 
+  openEnd() {
+    this.menu.open('end');
+  }
+
+  openCustom() {
+    this.menu.enable(true, 'custom');
+    this.menu.open('custom');
+  }
+
+//data-base
   ngOnInit() {
     this.db.getDatabaseState().subscribe(rdy => {
       if (rdy) {
@@ -59,20 +75,4 @@ export class DevelopersPage implements OnInit {
         this.product = {};
       });
   }
-
-  doReorder(ev: CustomEvent<ItemReorderEventDetail>) {
-    // The `from` and `to` properties contain the index of the item
-    // when the drag started and ended, respectively
-    console.log('Dragged from index', ev.detail.from, 'to', ev.detail.to);
-
-    // Finish the reorder and position the item in the DOM based on
-    // where the gesture ended. This method can also be called directly
-    // by the reorder group
-    ev.detail.complete();
-  }
-
-  toggleReorderGroup() {
-    this.reorderGroup.disabled = !this.reorderGroup.disabled;
-  }
-
 }
