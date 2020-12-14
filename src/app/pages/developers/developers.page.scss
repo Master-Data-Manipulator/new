@@ -12,11 +12,9 @@ img{
     border-radius: 50%;
 }
 
-
 .bottom-bar{
     background-color: #000000;
   display: flex;
-  justify-content: space-around;
   position: absolute;
   bottom: 0%;
   width: 100%;
@@ -58,7 +56,36 @@ ion-icon{
      background-color: rgb(195, 195, 195);
 }
 
-p{margin-left: 10px;}
+.space{margin-left: 10px;}
+
+h2{
+  text-align: center;
+  color: whitesmoke;
+}
+
+#add{margin-left: 10px;}
+
+#but{
+  flex: 0 1 auto;
+      position: absolute;             /* new */
+      left: 50%;
+      transform: translateX(-50%);
+  font-size: 11px;
+   color: var(--ion-color-secondary-contrast);
+}
+
+#details{
+  display: flex;
+  justify-content: space-around;
+  margin-left: 10px;
+}
+
+#buttons{
+  display: flex;
+  justify-content: space-around;
+}
+
+
 
 
 

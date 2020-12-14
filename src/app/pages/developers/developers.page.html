@@ -11,9 +11,14 @@
 
 <ion-content>
   <div class="container">
-
+    <h2>Certifications</h2>
     <div class="box" *ngFor="let dev of developers">
-     <p>{{dev.name}}</p>
+     <div class="space">{{dev.name}}</div>
+     <div id="details"><span>Credential:</span><span>Expires:</span></div>
+     <div id="buttons">
+     <button id="View" [routerLink]="['/', 'developers', dev.id]">View</button>
+      <button id="Update" [routerLink]="['/', 'developers', dev.id]">Update</button>
+    </div>
     </div>
   </div>
 
@@ -23,9 +28,8 @@
 <ion-footer>
   <ion-toolbar>
     <div class="bottom-bar">
-      <div class="bottom-button">
-        <ion-icon name="add-circle-outline"></ion-icon>
-      </div>
+        <ion-icon id="add" name="add-circle-outline"></ion-icon>
+      <ion-button color="contrast" size="small" id="but" fill="outline">EDIT CERTIFICATIONS</ion-button>
     </div>
   </ion-toolbar>
 </ion-footer>
