@@ -12,8 +12,9 @@ import { ContactComponent } from '../app/components/bottom-bar/contact/contact.c
 import { CertificateHomeComponent } from './pages/certificate-home/certificate-home.component';
 
 
+
 const routes: Routes = [
-  { path: '', redirectTo: '/developers', pathMatch: 'full' },
+  { path: '', loadChildren: './pages/menu/menu.module#MenuPageModule' },
   { path: 'sign-in', component: SignInComponent },
   { path: 'register-user', component: SignUpComponent },
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
@@ -23,7 +24,12 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'developers', loadChildren: './pages/developers/developers.module#DevelopersPageModule' },
   { path: 'developers/:id', loadChildren: './pages/developer/developer.module#DeveloperPageModule' },
-  { path: 'certificate-home', component: CertificateHomeComponent},
+  { path: 'menu', loadChildren: './pages/menu/menu.module#MenuPageModule' },
+  { path: 'certificate-home', component: CertificateHomeComponent },
+  {
+    path: 'menu',
+    loadChildren: () => import('./pages/menu/menu.module').then(m => m.MenuPageModule)
+  },
   {
     path: 'developers',
     loadChildren: () => import('./pages/developers/developers.module').then( m => m.DevelopersPageModule)
@@ -32,6 +38,8 @@ const routes: Routes = [
     path: 'developer',
     loadChildren: () => import('./pages/developer/developer.module').then( m => m.DeveloperPageModule)
   },
+  
+  
 
 
 

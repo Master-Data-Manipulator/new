@@ -2,8 +2,6 @@ import { DatabaseService, Dev } from './../../services/database.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IonReorderGroup } from '@ionic/angular';
-import { ItemReorderEventDetail } from '@ionic/core';
-import { MenuController } from '@ionic/angular';
 
 
 @Component({
@@ -31,22 +29,8 @@ export class DevelopersPage implements OnInit {
   
   
 
-  constructor(private db: DatabaseService, private menu: MenuController) {}
+  constructor(private db: DatabaseService) {}
 
-//menu
-  openFirst() {
-    this.menu.enable(true, 'first');
-    this.menu.open('first');
-  }
-
-  openEnd() {
-    this.menu.open('end');
-  }
-
-  openCustom() {
-    this.menu.enable(true, 'custom');
-    this.menu.open('custom');
-  }
 
 //data-base
   ngOnInit() {
