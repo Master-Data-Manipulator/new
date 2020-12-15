@@ -23,6 +23,7 @@ const routes: Routes = [
   { path: 'developers', loadChildren: './pages/developers/developers.module#DevelopersPageModule' },
   { path: 'developers/:id', loadChildren: './pages/developer/developer.module#DeveloperPageModule' },
   { path: 'menu', loadChildren: './pages/menu/menu.module#MenuPageModule' },
+  { path: 'add', loadChildren: './pages/add/add.module#AddPageModule' },
   {
     path: 'menu',
     loadChildren: () => import('./pages/menu/menu.module').then(m => m.MenuPageModule)
@@ -35,8 +36,10 @@ const routes: Routes = [
     path: 'developer',
     loadChildren: () => import('./pages/developer/developer.module').then( m => m.DeveloperPageModule)
   },
-  
-  
+  {
+    path: 'add',
+    loadChildren: () => import('./pages/add/add.module').then( m => m.AddPageModule)
+  },
 
 
 

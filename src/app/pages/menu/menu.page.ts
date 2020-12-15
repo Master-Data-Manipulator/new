@@ -10,12 +10,44 @@ export class MenuPage implements OnInit {
 
   pages = [
     {
-      title: 'First Page',
+      title: 'CERTIFICATIONS',
       url: '/menu/first'
     },
     {
-      title: 'Secod Page',
-      url: '/menu/second'
+      title: 'ADD CERTIFICATION',
+      url: '/add'
+    },
+    {
+      title: 'EDIT CERTIFICATIONS',
+      url: '/menu/first'
+    },
+    {
+      title: 'PROFILE',
+      url: '/menu/first'
+    },
+    {
+      title: 'TERMS & CONDITIONS',
+      url: '/menu/first'
+    },
+    {
+      title: 'PRIVACY',
+      url: '/menu/first'
+    },
+    {
+      title: 'HELP',
+      url: '/menu/first'
+    },
+    {
+      title: 'CUSTOMER SERVICE',
+      url: '/menu/first'
+    },
+    {
+      title: 'MESSAGES',
+      url: '/menu/first'
+    },
+    {
+      title: 'LOG OUT',
+      url: '/menu/first'
     }
   ];
 

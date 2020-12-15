@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Add Certificate</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+
+      <ion-item>
+        <ion-label position="stacked">Certificate</ion-label>
+        <ion-input [(ngModel)]="developer.name" placeholder="..."></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Credential Number</ion-label>
+        <ion-input [(ngModel)]="developer.skills" placeholder="..."></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Expiration Date</ion-label>
+        <ion-input [(ngModel)]="developer.img" placeholder="..."></ion-input>
+      </ion-item>
+      <ion-button expand="block" (click)="addDeveloper()">Add Certificate</ion-button>
+
+
+      
+</ion-content>
