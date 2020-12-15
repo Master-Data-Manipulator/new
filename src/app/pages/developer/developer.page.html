@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="developers"></ion-back-button>
     </ion-buttons>
-    <ion-title>Developer</ion-title>
+    <ion-title>Update Certificate</ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="delete()">
         <ion-icon name="trash"></ion-icon>
@@ -15,17 +15,17 @@
 <ion-content padding>
   <div *ngIf="developer">
     <ion-item>
-      <ion-label position="stacked">What\'s your name?</ion-label>
-      <ion-input [(ngModel)]="developer.name" placeholder="Developer Name"></ion-input>
+      <ion-label position="stacked">Certificate Name?</ion-label>
+      <ion-input [(ngModel)]="developer.name" placeholder="Certificate Name"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="stacked">What are your special skills (comma separated)?</ion-label>
-      <ion-input [(ngModel)]="skills" placeholder="Special Skills"></ion-input>
+      <ion-label position="stacked">Credential Number?</ion-label>
+      <ion-input [(ngModel)]="skills" placeholder="Credential Number"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="stacked">Your image URL</ion-label>
-      <ion-input [(ngModel)]="developer.img" placeholder="https://..."></ion-input>
+      <ion-label position="stacked">Expiration Date></ion-label>
+      <ion-input [(ngModel)]="developer.img" placeholder="Date"></ion-input>
     </ion-item>
-    <ion-button expand="block" (click)="updateDeveloper()">Update Developer Info</ion-button>
+    <ion-button expand="block" (click)="updateDeveloper()">Update Certificate Info</ion-button>
   </div>
 </ion-content>

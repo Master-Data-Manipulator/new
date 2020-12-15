@@ -1,13 +1,13 @@
 CREATE TABLE IF NOT EXISTS developer(id INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT,skills TEXT,img TEXT);
-INSERT or IGNORE INTO developer VALUES (1, 'Advanced Certified Hospice and Palliati...', '', 'https://pbs.twimg.com/profile_images/858987821394210817/oMccbXv6_bigger.jpg');
-INSERT or IGNORE INTO developer VALUES (2, 'Acute Care Nurse Practitioner', '', 'https://pbs.twimg.com/profile_images/953978653624455170/j91_AYfd_400x400.jpg');
-INSERT or IGNORE INTO developer VALUES (3, 'Adult Nurse Practitioner', '', 'https://pbs.twimg.com/profile_images/1060037170688417792/vZ7iAWXV_400x400.jpg');
-INSERT or IGNORE INTO developer VALUES (4, 'Certified Dialysis Nurse', '', 'https://pbs.twimg.com/profile_images/1060037170688417792/vZ7iAWXV_400x400.jpg');
-INSERT or IGNORE INTO developer VALUES (5, 'Certified Emergency Nurse', '', 'https://pbs.twimg.com/profile_images/1060037170688417792/vZ7iAWXV_400x400.jpg');
-INSERT or IGNORE INTO developer VALUES (6, 'Certified Heart Failure Nurse', '', 'https://pbs.twimg.com/profile_images/1060037170688417792/vZ7iAWXV_400x400.jpg');
-INSERT or IGNORE INTO developer VALUES (7, 'Licensed Practical Nurse', '', 'https://pbs.twimg.com/profile_images/1060037170688417792/vZ7iAWXV_400x400.jpg');
-INSERT or IGNORE INTO developer VALUES (8, 'Pain Management Nursing', '', 'https://pbs.twimg.com/profile_images/1060037170688417792/vZ7iAWXV_400x400.jpg');
-INSERT or IGNORE INTO developer VALUES (9, 'Trauma Certified Registered Nurse', '', 'https://pbs.twimg.com/profile_images/1060037170688417792/vZ7iAWXV_400x400.jpg');
+INSERT or IGNORE INTO developer VALUES (1, 'Advanced Certified Hospice and Palliati...', '987654321', '11/2021');
+INSERT or IGNORE INTO developer VALUES (2, 'Acute Care Nurse Practitioner', '987654321', '11/2021');
+INSERT or IGNORE INTO developer VALUES (3, 'Adult Nurse Practitioner', '987654321', '11/2021');
+INSERT or IGNORE INTO developer VALUES (4, 'Certified Dialysis Nurse', '987654321', '11/2021');
+INSERT or IGNORE INTO developer VALUES (5, 'Certified Emergency Nurse', '987654321', '11/2021');
+INSERT or IGNORE INTO developer VALUES (6, 'Certified Heart Failure Nurse', '987654321', '11/2021');
+INSERT or IGNORE INTO developer VALUES (7, 'Licensed Practical Nurse', '987654321', '11/2021');
+INSERT or IGNORE INTO developer VALUES (8, 'Pain Management Nursing', '987654321', '11/2021');
+INSERT or IGNORE INTO developer VALUES (9, 'Trauma Certified Registered Nurse', '987654321', '11/2021');
 
 
 CREATE TABLE IF NOT EXISTS product(id INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT, creatorId INTEGER);
