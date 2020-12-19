@@ -15,15 +15,15 @@
 <ion-content padding>
   <div *ngIf="developer">
     <ion-item>
-      <ion-label position="stacked">Certificate Name?</ion-label>
+      <ion-label position="stacked">Certificate Name</ion-label>
       <ion-input [(ngModel)]="developer.name" placeholder="Certificate Name"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="stacked">Credential Number?</ion-label>
+      <ion-label position="stacked">Credential Number</ion-label>
       <ion-input [(ngModel)]="skills" placeholder="Credential Number"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="stacked">Expiration Date></ion-label>
+      <ion-label position="stacked">Expiration Date</ion-label>
       <ion-input [(ngModel)]="developer.img" placeholder="Date"></ion-input>
     </ion-item>
     <ion-button expand="block" (click)="updateDeveloper()">Update Certificate Info</ion-button>

@@ -15,11 +15,11 @@ export class MenuPage implements OnInit {
     },
     {
       title: 'ADD CERTIFICATION',
-      url: '/add'
+      url: '/menu/second'
     },
     {
       title: 'EDIT CERTIFICATIONS',
-      url: '/menu/first'
+      url: '/menu/third'
     },
     {
       title: 'PROFILE',

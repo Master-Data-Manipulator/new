@@ -1,0 +1,78 @@
+.header{
+    padding: 5%;
+    display: flex;
+    border-bottom: solid 1px black;
+    background-color: black;
+}
+
+ion-title{ color: whitesmoke; }
+
+img{
+    border: solid 2px whitesmoke;
+    border-radius: 50%;
+}
+
+.bottom-bar{
+    background-color: #000000;
+  display: flex;
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  padding: 3%;
+  border: solid 1px #000000;
+}
+
+ion-icon{
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+}
+
+#add{margin-left: 10px;}
+
+#but{
+  flex: 0 1 auto;
+      position: absolute;             /* new */
+      left: 50%;
+      transform: translateX(-50%);
+  font-size: 11px;
+   color: var(--ion-color-secondary-contrast);
+}
+
+#details{
+  display: flex;
+  justify-content: space-around;
+  margin-left: 10px;
+}
+
+#buttons{
+  display: flex;
+  justify-content: space-around;
+}
+
+#menubutton{margin-bottom: -12px; }
+
+#flex{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+ justify-content: flex-end;
+}
+
+
+
+ion-menu {
+  --ion-background-color: var(--ion-item-background);
+  --ion-text-color: var(--ion-color-primary-contrast);
+
+  ion-toolbar {
+    --background: var(--ion-color-primary);
+  }
+
+  ion-list {/* optional, but it needs when you use gradient as a background color.*/
+    background: transparent;
+  }
+}
+
+.my-class{
+  margin-bottom: -50px;
+}

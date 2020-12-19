@@ -18,7 +18,11 @@ const routes: Routes = [
       },
       {
         path: 'second',
-        loadChildren: '../second/second.module#SecondPageModule'
+        loadChildren: '../add/add.module#AddPageModule'
+      },
+       {
+        path: 'third',
+        loadChildren: '../edit/edit.module#EditPageModule'
       }
     ]
   },
