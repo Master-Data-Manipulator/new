@@ -1,22 +1,5 @@
-<ion-header>
-  <ion-toolbar class="black">
-
-    <div class="header">
-      <img src="assets/pic.png" alt="Girl in a jacket" width="48" height="48">
-      <ion-title>Tony Stark</ion-title>
-      <div id="flex"><ion-buttons slot="end">
-        <ion-menu-button></ion-menu-button>
-      </ion-buttons>
-      </div>
-    </div>
-  </ion-toolbar>
-</ion-header>
-
-
 <ion-content>
   
-
-
   <div class="container">
     <h2>Certifications</h2>
     <div class="box" #myLi *ngFor="let dev of developers" (click)="myLi.classList.toggle('my-class')">
@@ -30,13 +13,3 @@
   </div>
 
 </ion-content>
-
-
-<ion-footer>
-  <ion-toolbar>
-    <div class="bottom-bar">
-        <ion-icon [routerLink]="['/', 'add']" id="add" name="add-circle-outline"></ion-icon>
-      <ion-button  [routerLink]="['/', 'edit']" color="contrast" size="small" id="but" fill="outline">EDIT CERTIFICATIONS</ion-button>
-    </div>
-  </ion-toolbar>
-</ion-footer>

@@ -23,31 +23,31 @@ export class MenuPage implements OnInit {
     },
     {
       title: 'PROFILE',
-      url: '/menu/first'
+      url: '/menu/fourth'
     },
     {
       title: 'TERMS & CONDITIONS',
-      url: '/menu/first'
+      url: '/menu/fith'
     },
     {
       title: 'PRIVACY',
-      url: '/menu/first'
+      url: '/menu/sixth'
     },
     {
       title: 'HELP',
-      url: '/menu/first'
+      url: '/menu/seventh'
     },
     {
       title: 'CUSTOMER SERVICE',
-      url: '/menu/first'
+      url: '/menu/eigth'
     },
     {
       title: 'MESSAGES',
-      url: '/menu/first'
+      url: '/menu/ninth'
     },
     {
       title: 'LOG OUT',
-      url: '/menu/first'
+      url: '/menu/tenth'
     }
   ];
 
