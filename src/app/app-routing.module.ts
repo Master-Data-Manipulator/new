@@ -13,7 +13,7 @@ import { ContactComponent } from '../app/components/bottom-bar/contact/contact.c
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'menu', pathMatch: 'full' },
+  { path: '', loadChildren: './pages/menu/menu.module#MenuPageModule' },
   { path: 'sign-in', component: SignInComponent },
   { path: 'register-user', component: SignUpComponent },
   { path: 'forgot-password', component: ForgotPasswordComponent },
