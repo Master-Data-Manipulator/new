@@ -23,7 +23,12 @@ const routes: Routes = [
        {
         path: 'third',
         loadChildren: '../edit/edit.module#EditPageModule'
-      }
+      },
+      {
+        path: 'tenth',
+        loadChildren: '../../components/sign-out/sign-out.module#SignOutPageModule'
+      },
+      
     ]
   },
   {

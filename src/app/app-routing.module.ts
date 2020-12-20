@@ -35,15 +35,8 @@ const routes: Routes = [
   {
     path: 'developer',
     loadChildren: () => import('./pages/developer/developer.module').then( m => m.DeveloperPageModule)
-  },
-  {
-    path: 'add',
-    loadChildren: () => import('./pages/add/add.module').then( m => m.AddPageModule)
-  },
-  {
-    path: 'edit',
-    loadChildren: () => import('./pages/edit/edit.module').then( m => m.EditPageModule)
-  },
+  }
+
 
 
 
