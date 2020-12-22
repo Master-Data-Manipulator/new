@@ -10,7 +10,6 @@ import { ToastController } from '@ionic/angular';
 })
 export class DeveloperPage implements OnInit {
   developer: Dev = null;
-  skills = '';
 
   constructor(private route: ActivatedRoute, private db: DatabaseService, private router: Router, private toast: ToastController) { }
 
@@ -20,7 +19,6 @@ export class DeveloperPage implements OnInit {
 
       this.db.getDeveloper(devId).then(data => {
         this.developer = data;
-        this.skills = this.developer.skills.join(',');
       });
     });
   }
@@ -32,9 +30,6 @@ export class DeveloperPage implements OnInit {
   }
 
   updateDeveloper() {
-    let skills = this.skills.split(',');
-    skills = skills.map(skill => skill.trim());
-    this.developer.skills = skills;
 
     this.db.updateDeveloper(this.developer).then(async (res) => {
       let toast = await this.toast.create({

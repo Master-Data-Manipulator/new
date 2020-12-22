@@ -45,10 +45,8 @@ export class DevelopersPage implements OnInit {
   }
 
   addDeveloper() {
-    let skills = this.developer['skills'].split(',');
-    skills = skills.map(skill => skill.trim());
 
-    this.db.addDeveloper(this.developer['name'], skills, this.developer['img'])
+    this.db.addDeveloper(this.developer['name'], this.developer['skills'], this.developer['img'], this.developer['path'])
       .then(_ => {
         this.developer = {};
       });

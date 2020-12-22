@@ -8,8 +8,9 @@ import { BehaviorSubject, Observable } from 'rxjs';
 export interface Dev {
   id: number,
   name: string,
-  skills: any[],
-  img: string
+  skills: string,
+  img: string,
+  path: string
 }
 
 @Injectable({
@@ -66,16 +67,13 @@ export class DatabaseService {
 
       if (data.rows.length > 0) {
         for (var i = 0; i < data.rows.length; i++) {
-          let skills = [];
-          if (data.rows.item(i).skills != '') {
-            skills = JSON.parse(data.rows.item(i).skills);
-          }
 
           developers.push({
             id: data.rows.item(i).id,
             name: data.rows.item(i).name,
-            skills: skills,
-            img: data.rows.item(i).img
+            skills: data.rows.item(i).skills,
+            img: data.rows.item(i).img,
+            path: data.rows.item(i).path           
           });
         }
       }
@@ -83,25 +81,23 @@ export class DatabaseService {
     });
   }
 
-  addDeveloper(name, skills, img) {
-    let data = [name, JSON.stringify(skills), img];
-    return this.database.executeSql('INSERT INTO developer (name, skills, img) VALUES (?, ?, ?)', data).then(data => {
+  addDeveloper(name, skills, img, path) {
+    let data = [name, skills, img, path];
+    return this.database.executeSql('INSERT INTO developer (name, skills, img, path) VALUES (?, ?, ?, ?)', data).then(data => {
       this.loadDevelopers();
     });
   }
 
   getDeveloper(id): Promise<Dev> {
     return this.database.executeSql('SELECT * FROM developer WHERE id = ?', [id]).then(data => {
-      let skills = [];
-      if (data.rows.item(0).skills != '') {
-        skills = JSON.parse(data.rows.item(0).skills);
-      }
+     
 
       return {
         id: data.rows.item(0).id,
         name: data.rows.item(0).name,
-        skills: skills,
-        img: data.rows.item(0).img
+        skills: data.rows.item(0).skills,
+        img: data.rows.item(0).img,
+        path: data.rows.item(0).path       
       }
     });
   }
@@ -114,8 +110,8 @@ export class DatabaseService {
   }
 
   updateDeveloper(dev: Dev) {
-    let data = [dev.name, JSON.stringify(dev.skills), dev.img];
-    return this.database.executeSql(`UPDATE developer SET name = ?, skills = ?, img = ? WHERE id = ${dev.id}`, data).then(data => {
+    let data = [dev.name, dev.skills, dev.img, dev.path];
+    return this.database.executeSql(`UPDATE developer SET name = ?, skills = ?, img = ?, path = ? WHERE id = ${dev.id}`, data).then(data => {
       this.loadDevelopers();
     })
   }

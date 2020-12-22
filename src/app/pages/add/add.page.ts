@@ -36,7 +36,7 @@ export class AddPage implements OnInit {
     let skills = this.developer['skills'].split(',');
     skills = skills.map(skill => skill.trim());
 
-    this.db.addDeveloper(this.developer['name'], skills, this.developer['img'])
+    this.db.addDeveloper(this.developer['name'], skills, this.developer['img'], this.developer['path'])
       .then(_ => {
         this.developer = {};
       });
