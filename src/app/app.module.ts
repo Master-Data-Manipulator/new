@@ -23,6 +23,9 @@ import { SQLite } from '@ionic-native/sqlite/ngx';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from "@angular/common";
 
+import { Camera } from '@ionic-native/camera/ngx';
+import { File } from '@ionic-native/file/ngx';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -33,7 +36,10 @@ import { CommonModule } from "@angular/common";
     AngularFirestoreModule,
     BrowserModule, IonicModule.forRoot(), AppRoutingModule,
   HttpClientModule],
-  providers: [AuthService,
+  providers: [
+    Camera,
+    File,
+    AuthService,
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },

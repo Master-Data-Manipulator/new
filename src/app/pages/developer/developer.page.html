@@ -16,16 +16,21 @@
   <div *ngIf="developer">
     <ion-item>
       <ion-label position="stacked">Certificate Name</ion-label>
-      <ion-input [(ngModel)]="developer.name" placeholder="Certificate Name"></ion-input>
+      <ion-input [(ngModel)]="developer.name" (input)="updateCredentials($event.target.value)" placeholder="Certificate Name"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="stacked">Credential Number</ion-label>
-      <ion-input [(ngModel)]="skills" placeholder="Credential Number"></ion-input>
+      <ion-label position="stacked">Credential</ion-label>
+      <ion-input  placeholder="{{developer.skills}}"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="stacked">Expiration Date</ion-label>
-      <ion-input [(ngModel)]="developer.img" placeholder="Date"></ion-input>
+      <ion-label position="stacked">MM/DD/YYYY</ion-label>
+      <ion-datetime placeholder="{{developer.img}}" [(ngModel)]="developer.img" displayFormat="MM/DD/YYYY" min="2018-01-01" max="2024-12-12" value="1994-12-15">
+      </ion-datetime>
     </ion-item>
+    <ion-button (click)="selectImage()">
+      Click Picture
+    </ion-button>
+    <img [src]="developer.path" />
     <ion-button expand="block" (click)="updateDeveloper()">Update Certificate Info</ion-button>
   </div>
 </ion-content>

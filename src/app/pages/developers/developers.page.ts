@@ -1,7 +1,7 @@
 import { DatabaseService, Dev } from './../../services/database.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Observable } from 'rxjs';
-import { IonReorderGroup } from '@ionic/angular';
+import {IonReorderGroup } from '@ionic/angular';
 
 
 @Component({
@@ -18,19 +18,14 @@ export class DevelopersPage implements OnInit {
   developers: Dev[] = [];
   items = [];
   products: Observable<any[]>;
-
+  date = "";
   result = [];
-
   developer = {};
   product = {};
 
   selectedView = 'devs';
 
-  
-  
-
-  constructor(private db: DatabaseService) {}
-
+  constructor(private db: DatabaseService) { }
 
 //data-base
   ngOnInit() {
@@ -61,6 +56,11 @@ export class DevelopersPage implements OnInit {
 
   toggleClass = (event) => {
     event.target.classList.toggle('my-class');
+  }
+
+  dateChange(e) {
+    e.toLocaleDateString()
+    return e;
   }
 
 }

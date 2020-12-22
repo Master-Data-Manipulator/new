@@ -8,6 +8,8 @@ import { DeveloperPageRoutingModule } from './developer-routing.module';
 
 import { DeveloperPage } from './developer.page';
 
+
+
 @NgModule({
   imports: [
     CommonModule,

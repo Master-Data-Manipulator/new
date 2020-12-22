@@ -4,12 +4,13 @@
     <h2>Certifications</h2>
     <div class="box" #myLi *ngFor="let dev of developers" (click)="myLi.classList.toggle('my-class')">
       <div class="space">{{dev.name}}</div>
-      <div id="details"><span>Credential:{{dev.skills}}</span><span>yep:{{dev.path}}</span><span>Expires:{{dev.img}}</span></div>
+      <div id="details"><span id="first">Credential:</span><span id="second">{{dev.skills}}</span><span id="first">Expires:</span><span id="second">{{dev.img | date:'M/d/yy'}}</span></div>
       <div id="buttons">
         <button id="View" [routerLink]="['/', 'developers', dev.id]">View</button>
         <button id="Update" [routerLink]="['/', 'developers', dev.id]">Update</button>
       </div>
     </div>
+    <div class="box"></div>
   </div>
 
 </ion-content>
