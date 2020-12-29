@@ -6,7 +6,7 @@
       <div class="space">{{dev.name}}</div>
       <div id="details"><span id="first">Credential:</span><span id="second">{{dev.skills}}</span><span id="first">Expires:</span><span id="second">{{dev.img | date:'M/d/yy'}}</span></div>
       <div id="buttons">
-        <button id="View" [routerLink]="['/', 'developers', dev.id]">View</button>
+        <button id="View" [routerLink]="['/', 'views', dev.id]">View</button>
         <button id="Update" [routerLink]="['/', 'developers', dev.id]">Update</button>
       </div>
     </div>
